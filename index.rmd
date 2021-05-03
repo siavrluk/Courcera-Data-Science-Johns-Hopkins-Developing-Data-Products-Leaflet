@@ -25,7 +25,8 @@ my_map <- atp_data %>%
             leaflet() %>%
             addTiles() %>%
             addMarkers(~Longitude, ~Latitude, icon = ~icon_list[Category],
-                       popup = paste("<b> Venue: </b>", atp_data$Venue, "<br>",
+                       popup = paste("<b> Event: </b>", atp_data$Event, "<br>",
+                                     "<b> Venue: </b>", atp_data$Venue, "<br>",
                                      "<b> Surface: </b>", atp_data$Surface, "<br>",
                                      "<b> Current champion: </b>", atp_data$Champion, "<br>",
                                      "<b> Prize money: </b>", atp_data$Prize),
